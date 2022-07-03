@@ -3,8 +3,6 @@ package com.example.core.result;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-import java.io.Serializable;
-
 /**
  * @description:
  * @author: zhh
@@ -12,7 +10,7 @@ import java.io.Serializable;
  */
 @AllArgsConstructor
 @Getter
-public class Result<T> implements Serializable {
+public class Result<T> {
     private Integer code;
     private String msg;
     private T data;

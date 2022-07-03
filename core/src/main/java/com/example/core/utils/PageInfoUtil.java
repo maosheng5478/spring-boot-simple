@@ -1,0 +1,38 @@
+package com.example.core.utils;
+
+import com.github.pagehelper.PageInfo;
+
+import java.io.Serializable;
+
+/**
+ * @description:
+ * @author: zhh
+ * @time: 2022/7/3
+ */
+public class PageInfoUtil {
+    /**
+     * 转化PageInfo
+     *
+     * @param from 源PageInfo
+     * @param to   需要转成的对象
+     */
+    public static <T extends Serializable, E> void transform(PageInfo<T> from, PageInfo<E> to) {
+        to.setPageNum(from.getPageNum());
+        to.setPageSize(from.getPageSize());
+        to.setSize(from.getSize());
+        to.setStartRow(from.getStartRow());
+        to.setEndRow(from.getEndRow());
+        to.setTotal(from.getTotal());
+        to.setPages(from.getPages());
+        to.setPrePage(from.getPrePage());
+        to.setNextPage(from.getNextPage());
+        to.setIsFirstPage(from.isIsFirstPage());
+        to.setIsLastPage(from.isIsLastPage());
+        to.setHasPreviousPage(from.isHasPreviousPage());
+        to.setHasNextPage(from.isHasNextPage());
+        to.setNavigatePages(from.getNavigatePages());
+        to.setNavigatepageNums(from.getNavigatepageNums());
+        to.setNavigateFirstPage(from.getNavigateFirstPage());
+        to.setNavigateLastPage(from.getNavigateLastPage());
+    }
+}

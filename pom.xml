@@ -24,6 +24,7 @@
         <pagehelper.version>1.4.2</pagehelper.version>
         <mysql.version>8.0.29</mysql.version>
         <knife4j.version>2.0.9</knife4j.version>
+        <mapstruct.version>1.5.1.Final</mapstruct.version>
 
         <commons.io.version>20030203.000550</commons.io.version>
         <commons.pool.version>20030825.183949</commons.pool.version>

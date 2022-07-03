@@ -24,7 +24,7 @@ public class ResultFactory {
     }
 
     public static Result<String> buildFail(String message) {
-        return buildResult(ResultCode.FAIL, message, "");
+        return buildResult(ResultCode.FAIL, message);
     }
 
     public static <T> Result<T> buildResult(ResultCode resultCode, String message, T data) {

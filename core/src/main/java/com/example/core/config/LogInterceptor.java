@@ -1,10 +1,10 @@
-package com.example.api.config;
+package com.example.core.config;
 
+import org.jetbrains.annotations.NotNull;
 import org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LogInterceptor extends DispatcherServlet {
 
     @Override
-    protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    protected void doDispatch(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response) throws Exception {
         super.doDispatch(request, response);
     }
 
