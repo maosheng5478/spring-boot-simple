@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <name>spring-boot-simple</name>
+    <packaging>pom</packaging>
+
+    <groupId>org.example</groupId>
+    <artifactId>spring-boot-simple</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>api</module>
+        <module>core</module>
+        <module>common</module>
+    </modules>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <lombok.version>1.18.24</lombok.version>
+        <mybatis-plus.version>3.5.2</mybatis-plus.version>
+        <pagehelper.version>1.4.2</pagehelper.version>
+        <mysql.version>8.0.29</mysql.version>
+        <knife4j.version>2.0.9</knife4j.version>
+
+        <commons.io.version>20030203.000550</commons.io.version>
+        <commons.pool.version>20030825.183949</commons.pool.version>
+        <commons.lang3.version>3.12.0</commons.lang3.version>
+        <commons.collections4.version>4.4</commons.collections4.version>
+        <commons.math3.version>3.6.1</commons.math3.version>
+        <commons.compress.version>1.21</commons.compress.version>
+        <hutools.version>5.8.4</hutools.version>
+        <jsr310.version>2.13.3</jsr310.version>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.1</version>
+        <relativePath/>
+    </parent>
+    <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>common</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
