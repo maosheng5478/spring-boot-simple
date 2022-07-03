@@ -7,9 +7,6 @@ import com.example.core.result.Result;
 import com.example.core.result.ResultFactory;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @description:
  * @author: zhh

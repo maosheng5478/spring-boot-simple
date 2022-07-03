@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>core</artifactId>
+    <artifactId>simple-core</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>core</name>
-    <description>core</description>
+    <name>simple-core</name>
+    <description>simple-core</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
