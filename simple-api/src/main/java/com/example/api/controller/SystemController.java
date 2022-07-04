@@ -1,10 +1,12 @@
 package com.example.api.controller;
 
 import com.example.api.dto.OptionDTO;
+import com.example.api.service.SystemService;
 import com.example.api.vo.TestVO;
 import com.example.core.exception.CustomException;
 import com.example.core.result.Result;
 import com.example.core.result.ResultFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -16,6 +18,10 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/sys")
 public class SystemController {
 
+
+    @Autowired
+    private SystemService systemService;
+
     @GetMapping("/test")
     public Result<String> test() {
         return ResultFactory.buildSuccess("test");
@@ -23,9 +29,7 @@ public class SystemController {
 
     @PostMapping("/test/post")
     public Result<TestVO> testPost(@RequestBody OptionDTO dto) {
-        TestVO result = new TestVO();
-        result.setCode(dto.getValue());
-        result.setValue(dto.getLabel());
+        TestVO result = systemService.test(dto);
         return ResultFactory.buildSuccess(result);
     }
 
